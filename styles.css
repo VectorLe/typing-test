@@ -13,6 +13,7 @@ input {
 	align-items: center;
 	width: 100%;
 	height: 100%;
+	flex-direction: column;
 }
 .test-container {
 	width: 33%;
@@ -28,6 +29,38 @@ h1 {
 }
 .prompt,
 .timerText, .wpmText,
-.test-container input {
+.test-container input,
+.settings-container label {
 	font-size: 2em;
+}
+.settings-container {
+	display: flex;
+	margin-top: 2em;
+	width: 400px;
+	justify-content: center;
+}
+.timeBtn {
+	position: relative;
+	margin: 0 1em;
+}
+.timeBtn > label {
+	padding: 0.5em 2em;
+	background: gray;
+	border: 2px solid gray;
+	border-radius: 1em;
+	cursor: pointer;
+}
+.timeBtn > input:hover {
+	cursor: pointer;
+}
+.timeBtn input:checked + label {
+	color: lime;
+	border: 2px solid lime;
+	background: lightgray;
+}
+.timeBtn > input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
 }
